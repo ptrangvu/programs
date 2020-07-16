@@ -1,0 +1,26 @@
+---
+title: "BIOF87_Challenge2"
+author: "Trang Vu"
+date: "7/16/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```setwd("~/Downloads")
+trpv1 <- read.delim("~/Downloads/trpv1.tsv", header=FALSE)
+
+trpv1_1 <- subset(trpv1, trpv1$V15 >= 0.5)
+head(trpv1_1)
+
+trpv1_2 <- trpv1_1[,c(1,2,15)]
+head(trpv1_2)
+```
